@@ -1,0 +1,158 @@
+﻿
+:root {
+    box-sizing: border-box
+}
+
+body {
+    background-color: lightgrey;
+}
+
+
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(4,auto);
+    grid-template-areas: "title title"
+        "nav nav"
+        "main  aside1"
+        "main  aside2";
+    margin: 0 auto;
+    max-width: 1080px;
+    grid-gap: 1.5em;
+}
+
+header {
+    grid-area: title;
+    text-align: center;
+    margin: 0;
+    border: dotted;
+    padding: 0;
+}
+
+.page-heading {
+    margin: 0;
+}
+
+.nav-right {
+    margin-left: auto;
+}
+
+
+nav {
+    grid-area: nav;
+}
+
+.site-nav {
+
+    margin: 0;
+    padding: .5em;
+    border-radius: 0.5em;
+    background-color: lightpink;
+}
+
+    .site-nav ul {
+        display:flex;
+        padding: .5em;
+        border:dashed;
+        overflow:auto;
+       
+    }
+
+    .site-nav li {
+        float: left;
+        
+        list-style: none;
+    }
+  .site-nav .nav-right{
+      
+        float:left;
+        
+    }
+
+  
+
+    .site-nav a {
+        display:block;
+        color: black;
+        border-radius:.5em;
+        background-color: lightyellow;
+        padding: .5em 1em;
+        text-decoration: none;
+    }
+
+    .site-nav li a:hover {
+        background-color: rgb(142,111, 152);
+    }
+    .site-nav li + li {
+        margin-left: 1.5em;
+    }
+
+.main {
+    grid-area: main;
+}
+
+.sidebar-top {
+    grid-area: aside1;
+}
+
+.sidebar-bottom {
+    grid-area: aside2;
+}
+
+.tile {
+    background-color: white;
+    padding: .5em 1em;
+    border-radius: .5em;
+}
+
+.login-form  h3 {
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.login-form .input{
+    display:block;
+}
+
+.submit-button{
+    background-color:snow ;
+    color:gold;
+    border-style :none;
+    border-radius:.5em;
+}
+
+.centered{
+    text-align:center;
+}
+
+.sidebar-bottom small{
+    font-weight:bold;
+
+}
+.cost{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    line-height:.7;
+    margin:.5em auto;
+}
+.cost-dollars{
+    font-size:4rem;
+}
+
+.cost-cents{
+    font-size:2rem;
+    align-self:start;
+}
+
+.cta-button{
+    text-decoration:none;
+    display:block;
+    background-color:rgb(192 ,111, 152);
+    padding:.5em ;
+    color:white;
+}

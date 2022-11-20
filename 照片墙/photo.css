@@ -1,0 +1,26 @@
+﻿body {
+    background-color: #ee4863;
+}
+
+.fig {
+    text-align: right;
+    background-color: #82111f;
+    color: #74759b;
+    
+}
+img{
+    float:left;
+}
+figure{
+    display:flex;
+    margin:0;
+}
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    grid-auto-rows:1fr;
+    grid-gap:1em;
+    grid-auto-flow:dense;
+
+
+}
