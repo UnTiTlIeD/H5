@@ -1,0 +1,229 @@
+:root{
+    box-sizing: border-box;
+    font-size: calc(0.6em+1vw);
+    
+}
+@media(min-width:50em){
+    :root{
+        font-size: 1.125em;
+    }
+
+}
+
+*,*::after,*::before{
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a:link{
+    color: #1476b8;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:visited{
+    color:#1430b8;
+}
+a:hover{
+    text-decoration: underline;
+}
+a:active{
+    color: #b81414;
+}
+
+.page-header{
+    padding: 0.4em 1em;
+    background-color: #fff;
+
+}
+@media(min-width:35em){
+    .page-header{
+        padding: 1em;
+    }
+}
+
+.title > h1{
+    color:#333;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin: 0.2em 0;
+    /* 这里是对于外边距折叠的调整 */
+}
+@media (min-width:35em) {
+    .title >h1{
+        font-size: 2.25rem;
+    }
+    
+}
+
+.slogan{
+    color:#888;
+    font-size: 0.875em;
+}
+
+.hero{
+    padding: 2em 1em ;
+    text-align: center;
+    color:#fff;
+    background-image: url(images/snow.jpg);
+    background-size: 100%;
+    text-shadow: 0.1em 0.1em 0.3em #000;
+    /* 加了size以后窗口变大后图片会跟着变大，不加的话会重复图片 */
+
+}
+@media (min-width:35em)
+{
+    .hero{
+        font-size: 1.5rem;
+        padding: 2em 4em;
+    }
+}
+
+
+
+main{
+    padding:1em;
+}
+
+@media(min-width:35em)
+{
+    .main{
+        padding: 2em 1em;
+    }
+}
+
+@media(min-width:50em)
+{
+    .main{
+        padding: 4em 2em;
+    }
+}
+.sub-title{
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    margin: 1.5em 0;
+
+}
+
+.menu{
+    position: relative;
+
+}
+
+.menu-toggle{
+    font-size: 3em;
+    position: absolute;
+    top:-1.2em;
+    right:0.2em;
+    border: 0;
+    background-color: transparent;
+
+    width:1em;
+    height: 1em;
+    text-indent: 5em;
+    overflow: hidden;
+
+
+
+}
+.menu-toggle::after{
+    content: "\2261";
+    position: absolute;
+    top: 0.2em;
+    right: 0.2em;
+    text-indent: 0;
+    display: block;
+    color: pink;
+
+}
+
+.menu-dropdown{
+    position:absolute;
+    margin: 0;
+    right:0;
+    left: 0;
+    /* 不明白right和left在这里的作用 */
+    display: none;
+}
+ .is-open .menu-dropdown{
+    display: block;
+}
+
+
+
+.nav-menu{
+   
+    list-style: none;
+    padding: 0;
+    
+}
+.nav-menu > li
+{
+    background-color: lightgrey;
+}
+/* li的背景色会盖在ul上 */
+
+/* nav-menu 指的就是ul 在这里把li的背景色换掉也是同样效果 */
+.menu-dropdown li+li{
+    border-top:1px dashed ;
+}
+
+.menu-dropdown a {
+    display: block;
+    color: rgb(100, 182, 198);
+    padding: .5em 1em;
+}
+
+@media (min-width:35em) {
+    /* 导航栏 */
+    .menu-toggle{
+        display: none;
+    }
+    .menu-dropdown{
+        display: block;
+        /* 包含导航栏的容器 */
+        position: static;
+    }
+
+    .nav-menu{
+        display: flex;
+        /* 让ul成为弹性容器 */
+         border: 0;
+    }
+    .nav-menu > li
+{   
+        flex: 1;
+        border-radius: .5em;
+        
+    
+        /* 让导航选项卡弹性增长 */
+    }
+    .nav-menu>li + li 
+    {
+        margin-left: 1em;
+        border-top: 0;
+        /* border-left: 1em solid background; */
+        /* 奇妙发现 但会影响圆角表现*/
+       
+    }
+    .nav-menu > li > a{
+        text-align: center;
+        font-size: 1.2em;
+    }
+    
+}
+
+@media (min-width:35em)
+{
+    .row{
+        display: flex;
+        margin: 0 -0.75em;
+    }
+
+    .column{
+        margin:0 0.75em;
+    }
+}
+

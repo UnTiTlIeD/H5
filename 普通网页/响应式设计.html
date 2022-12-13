@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width,intial-scale=1"/>
+    <!-- width将设备宽度作为假定宽度而不是全屏浏览器
+    没有这句标题变化将保持全屏的字号 -->
+    <meta charset="utf-8" />
+    <link href="响应式设计.css" rel="stylesheet" />
+    <title>测试
+ </title>
+ 
+
+</head>
+<body>
+  <header id="header" class="page-header">
+    <div class="title">
+        <h1>wombat coffee roasters</h1>
+        <div class="slogan">we love coffee</div>
+    </div>
+  </header>
+
+  <nav class="menu" id="main-menu">
+    <button class="menu-toggle" id="toggle-menu">toggle menu     </button>
+    <div class="menu-dropdown">
+        <ul class="nav-menu">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/about.html">Shop</a></li>
+            <li><a href="/about.html">Men12u</a></li>
+            <li><a href="/about.html">Br2ew</a></li>
+                
+        </ul>
+    </div>
+</nav>
+<aside class="hero"id="hero">
+    Welocme to wombat coffee roasters! we are passionate about our craft ,striving to brinf you the best hand-crafted coffee in the city.
+</aside>    
+<main id="main">
+    <div class="row">
+        <section class="column">
+            <h2 class="sub-title">single-origin</h2>
+            <p>we have built parterships with some small farms around the world to hand-select beans at the eak of the seaon. We then carefully roast in </p>
+        </section>
+        <section class="column">
+            <h2 class="sub-title">Blends</h2>
+            <p>Our taster have put together a selection of carefully balanced blends .Our famous <a href="/household.html">house blend</a> is available all year round </p>
+        </section>
+        <section class="column">
+            <h2 class="sub-title">Brewing Equipment</h2>
+            <p>we offer our favorite kettles,French presses, and pour-over cones.Come to one of our<a href="/class.html"> brewing classes</a>to learn how to brew the best pour over cofffee </p>
+        </section>
+
+    </div>
+</main>
+<script type="text/javascript">
+    function showMenu(){
+        var menu = document.getElementById('main-menu');
+        menu.classList.toggle('is-open');['/']
+    }
+
+        var button=document.getElementById('toggle-menu');
+        button.addEventListener('click',showMenu);
+
+   
+</script>
+</body>
+</html>

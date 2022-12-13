@@ -5,6 +5,7 @@
 
 body {
     background-color: lightgrey;
+
 }
 
 
@@ -51,7 +52,7 @@ nav {
     margin: 0;
     padding: .5em;
     border-radius: 0.5em;
-    background-color: lightpink;
+    background-color: lightblue;
 }
 
     .site-nav ul {
@@ -154,5 +155,5 @@ nav {
     display:block;
     background-color:rgb(192 ,111, 152);
     padding:.5em ;
-    color:white;
+    color:green;
 }
